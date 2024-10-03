@@ -10,12 +10,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>Contador de Valores</h1>
-        <input type="number" id="valor" placeholder="Digite um valor">
-        <button onclick="adicionarValor()">Adicionar Valor</button>
-        <h2>Histórico</h2>
-        <ul id="historico"></ul>
-        <h2>Total: <span id="total">0</span></h2>
+        <h1>Finanças Pessoais</h1>
+        <form id="transactionForm">
+            <input type="number" id="amount" step="0.01" placeholder="Valor" required>
+            <button id='mais' type="submit">Adicionar</button>
+        </form>
+        <table id="transactionsTable">
+            <thead>
+                <tr>
+                    <th id="dh">Data e Hora</th>
+                    <th>Valor</th>
+                    <th id="ac">Ação</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="total">Total: R$ <span id="totalAmount">0.00</span></div>
     </div>
     <script src="script.js"></script>
 </body>
